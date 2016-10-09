@@ -6,7 +6,7 @@
             <span class="label label-default">{{ post.published_date }}</span>
         </div>
         <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        <!--<p>{{ post.text|linebreaksbr }}</p>-->
+        <p>{{ post.text|slice:"0:20" }}...</p>
     </div>
 {% endfor %}
 {% endblock content %}
